@@ -38,4 +38,22 @@ public class SmartArrayAppTest {
 
         assertArrayEquals(expectedStudentNames, studentNames);
     }
+
+    @Test
+    public void testStudents()
+    {
+        Student[] students = new Student[] {
+                new Student("Shiny", "Crystal", 89.5, 2),
+                new Student("Flex", "Tiffany", 92.3, 2),
+                new Student("John", "Wood", 2.0, 4),
+                new Student("Tasty", "Amber", 95.3, 2),
+                new Student("Sweet", "Brandy", 87.3, 2),
+                new Student("Shiny", "Crystal", 89.5, 2)
+        };
+
+        String[] studentNames = SmartArrayApp.findDistinctStudentNamesFrom2ndYearWithGPAgt4AndOrderedBySurname(students);
+        String[] expectedStudentNames = {"Amber Tasty", "Brandy Sweet", "Crystal Shiny", "Tiffany Flex"};
+
+        assertArrayEquals(expectedStudentNames, studentNames);
+    }
 }

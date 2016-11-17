@@ -16,24 +16,26 @@ public class Student {
     }
 
     public double getGPA() {
-        return GPA;
+        return this.GPA;
     }
 
     public int getYear() {
-        return year;
+        return this.year;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public String getSurname() {
-        return surname;
+        return this.surname;
     }
 
     @Override
     public String toString() {
-        return "Student{name=" + name + ", surname=" + surname + ", " + "GPA=" + GPA + ", year=" + year + '}';
+        return this.surname +
+                " " +
+                this.name;
     }
 
 }
